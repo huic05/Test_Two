@@ -13,6 +13,14 @@ public class Part_3_2 : MonoBehaviour
 
         //Using transform.Find or transform.Get get the Transform of Part_3_Cylinder which is a child of Part_3_Sphere
         //and use PrintOutNameAndPosition (1pt)
+        var cubetransform = GetComponent<Transform>();
+        PrintOutNameAndPosition(cubetransform.name, cubetransform.position);
+        var spheretransform = GameObject.Find("Part_3_Sphere").GetComponent<Transform>();
+        PrintOutNameAndPosition(spheretransform.name, spheretransform.position);
+        var cyltransform = GameObject.Find("Part_3_Sphere").GetComponent<Transform>().transform.GetChild(0);
+        PrintOutNameAndPosition(cyltransform.name, cyltransform.position);
+
+
 
     }
 
